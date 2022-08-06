@@ -39,7 +39,9 @@ app.use('/api/signIn',signInrouter);
 app.use('/api/upload',checkAuth,upload);
 app.use('/api/videolist',checkAuth,videoList);
 
-
+app.get("/", function (req, res) {
+    res.send("server is running!!!");
+  });
 
 app.listen(process.env.PORT  || 3015);
 
