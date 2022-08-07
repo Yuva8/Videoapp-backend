@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 router.post('/',upload.single('file'), (req, res, next) => {
     thumbnailGenerator.generateThumbnail(
         // /api/videos is made publically available in App.js
-        'https://videoappyuvaraj.herokuapp.com/api/videos/' + req.file.filename.replace(/ /g, '_'), 
+        'http://localhost:3017/api/videos/' + req.file.filename.replace(/ /g, '_'), 
         req.file.filename.replace(/ /g, '_'),
         req.userData.firstName);
     res.status(200).json({

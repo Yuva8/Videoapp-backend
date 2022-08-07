@@ -33,7 +33,7 @@ const generateThumbnail = (target, title, username) => {
     uploader_name: username,
     upload_title: title,
     video_path: target,
-    thumbnail_path: 'https://videoappyuvaraj.herokuapp.com/api/videos/video_thumbnails/' + encodeURIComponent(title + '.jpg')
+    thumbnail_path: 'http://localhost:3017/api/videos/video_thumbnails/' + encodeURIComponent(title + '.jpg')
   });
   videoDetails
     .save()
